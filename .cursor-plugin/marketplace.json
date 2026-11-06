@@ -1,7 +1,7 @@
 {
   "name": "cindy-cursor-plugins",
   "interface": {
-    "displayName": "Cursor Skills for Cindy (Unofficial)"
+    "displayName": "pstack for Cindy (Unofficial)"
   },
   "plugins": [
     {

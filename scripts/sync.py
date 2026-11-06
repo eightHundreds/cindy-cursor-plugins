@@ -379,7 +379,7 @@ def build(upstream, root, destination):
         included.setdefault(upstream_name, []).append(plugin_id)
     if not plugins:
         raise ValueError("Refusing to publish an empty marketplace")
-    market = {"name": "cindy-cursor-plugins", "interface": {"displayName": "Cursor Skills for Cindy (Unofficial)"}, "plugins": plugins}
+    market = {"name": "cindy-cursor-plugins", "interface": {"displayName": "pstack for Cindy (Unofficial)"}, "plugins": plugins}
     for rel in (".agents/plugins/marketplace.json", ".cursor-plugin/marketplace.json"):
         target = destination / rel
         target.parent.mkdir(parents=True, exist_ok=True)
