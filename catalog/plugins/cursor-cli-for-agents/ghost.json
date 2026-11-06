@@ -4,7 +4,7 @@
   "name": "CLI for Agents · Cursor Skills",
   "description": "Design and review CLIs that coding agents can run reliably. Unofficial adaptation of Cursor's skill.",
   "whenToUse": "Designing command-line tools, non-interactive flags, layered help, pipelines, actionable errors, idempotency and dry runs.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minCindyVersion": "0.1.126",
   "entry": "main.js",
   "skill": {

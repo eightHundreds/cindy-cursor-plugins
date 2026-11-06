@@ -4,7 +4,7 @@
   "name": "Origin API Guides · Cursor Skills",
   "description": "Consult the Cursor Origin API documentation and plan GitHub App ports. Guides only; no Origin connection is installed.",
   "whenToUse": "Explicit requests about Cursor Origin APIs, Origin Apps, scopes, webhooks or planning a GitHub App port to Origin.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minCindyVersion": "0.1.126",
   "entry": "main.js",
   "skill": {

@@ -4,7 +4,7 @@
   "name": "pstack Quality · Cursor Skills",
   "description": "Four selected pstack skills about domain modeling, behavioral tests, root causes and idempotent operations.",
   "whenToUse": "Modeling stateful code, reviewing test behavior, finding a debugging root cause or designing operations safe to retry.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minCindyVersion": "0.1.126",
   "entry": "main.js",
   "skill": {

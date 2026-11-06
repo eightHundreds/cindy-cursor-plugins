@@ -4,7 +4,7 @@
   "name": "Grok Voice Guides · Cursor Skills",
   "description": "Coding guides for adding Grok voice, dictation, read-aloud and development logs to your own app. Requires a separate xAI API account.",
   "whenToUse": "Explicit requests to build Grok voice, speech-to-text, text-to-speech or voice-session logging in a user's application.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minCindyVersion": "0.1.126",
   "entry": "main.js",
   "skill": {

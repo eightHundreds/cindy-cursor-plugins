@@ -1,3 +1,4 @@
+import hashlib
 import importlib.util
 import json
 import os
@@ -28,7 +29,8 @@ class SyncTests(unittest.TestCase):
         self.git("config", "user.name", "Test")
         self.git("config", "user.email", "test@example.invalid")
         self.entries = [{"name": name, "source": name} for name in ("alpha", "beta")]
-        self.policy = {"packages": [self.package(name) for name in ("alpha", "beta")], "exclusions": {}}
+        license_bytes = b"MIT License\nPermission is hereby granted\n"
+        self.policy = {"approvedLicenseSha256": [hashlib.sha256(license_bytes).hexdigest()], "packages": [self.package(name) for name in ("alpha", "beta")], "exclusions": {}}
         self.write_market()
         for name in ("alpha", "beta"):
             self.write_upstream(f"{name}/LICENSE", "MIT License\nPermission is hereby granted\n")
@@ -166,6 +168,17 @@ class SyncTests(unittest.TestCase):
         self.assertTrue(self.state("alpha")["active"])
         self.assertEqual(self.state("alpha")["version"], "1.0.0")
 
+    def test_unapproved_license_with_mit_phrases_does_not_overwrite_output(self):
+        self.run_sync()
+        approved = self.policy.pop("approvedLicenseSha256")
+        self.write_policy()
+        self.assert_failure_preserves_output("(?i)(licen[cs]e|approvedLicenseSha256)")
+        self.policy["approvedLicenseSha256"] = approved
+        self.write_policy()
+        self.write_upstream("alpha/LICENSE", "MIT License\nPermission is hereby granted\nAdditional restriction: no commercial use.\n")
+        self.commit()
+        self.assert_failure_preserves_output("(?i)licen[cs]e")
+
     def test_malformed_yaml_does_not_overwrite_output(self):
         self.run_sync()
         self.write_skill("alpha", "---\nname: alpha\ndescription: [unterminated\n---\n")
@@ -217,6 +230,27 @@ class SyncTests(unittest.TestCase):
         self.assertEqual(meta, {"name": "alpha", "description": override, "metadata": "retained"})
         self.assertEqual(self.manifest("alpha")["skill"]["items"][0]["description"], meta["description"])
         self.assertEqual(actual_body, body)
+
+    def test_overridden_upstream_description_change_updates_provenance_and_version(self):
+        self.policy["packages"][0]["descriptionOverrides"] = {"alpha": "Reviewed description"}
+        self.write_policy()
+        self.run_sync()
+        beta = self.state("beta")
+        first_output = (self.root / "catalog/plugins/alpha/skills/alpha/SKILL.md").read_bytes()
+        updated = "---\nname: alpha\ndescription: changed upstream description\n---\n\nInstructions.\n"
+        self.write_skill("alpha", updated)
+        self.commit()
+        commit = self.git("rev-parse", "HEAD").decode().strip()
+        self.run_sync()
+        self.assertEqual((self.root / "catalog/plugins/alpha/skills/alpha/SKILL.md").read_bytes(), first_output)
+        self.assertEqual(self.state("alpha")["version"], "1.0.1")
+        self.assertEqual(self.manifest("alpha")["version"], "1.0.1")
+        self.assertEqual(self.state("alpha")["contentCommit"], commit)
+        self.assertEqual(self.state("beta"), beta)
+        provenance = json.loads((self.root / "catalog/plugins/alpha/UPSTREAM.json").read_text())
+        self.assertEqual(provenance["commit"], commit)
+        self.assertEqual(provenance["skills"][0]["upstreamSha256"], hashlib.sha256(updated.encode()).hexdigest())
+        self.assertEqual(provenance["skills"][0]["distributedSha256"], hashlib.sha256(first_output).hexdigest())
 
     def test_folded_description_is_exact(self):
         self.write_skill("alpha", "---\nname: alpha\ndescription: >-\n  First line of description\n  continues here.\n\n  Second paragraph.\n---\nBody.\n")

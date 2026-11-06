@@ -4,7 +4,7 @@
   "name": "pstack Types · Cursor Skills",
   "description": "Four selected pstack skills about TypeScript, domain types and validation boundaries. Includes no pstack modes or hooks.",
   "whenToUse": "Reviewing TypeScript types, discriminated unions, external-data validation and encoding recurring rules in structural checks.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minCindyVersion": "0.1.126",
   "entry": "main.js",
   "skill": {

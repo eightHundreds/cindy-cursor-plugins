@@ -1,5 +1,9 @@
 {
   "schemaVersion": 1,
+  "approvedLicenseSha256": [
+    "702f5f331b56aff0e33d8c7826df5202559f894145eb70355c6477b55b5bb8a0",
+    "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+  ],
   "packages": [
     {
       "id": "cursor-cli-for-agents",

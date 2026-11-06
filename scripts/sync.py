@@ -147,8 +147,9 @@ def build(upstream, root, destination):
             continue
         license_path = f"{plugin_path}/LICENSE"
         license_data = source.read(license_path)
-        if b"MIT License" not in license_data or b"Permission is hereby granted" not in license_data:
-            raise ValueError(f"License needs review: {license_path}")
+        license_digest = hashlib.sha256(license_data).hexdigest()
+        if license_digest not in policy["approvedLicenseSha256"]:
+            raise ValueError(f"License needs review: {license_path} ({license_digest})")
         files = {"LICENSE": license_data, "main.js": b"// Skills-only plugin; no autonomous runtime or tools.\n"}
         modes = {}
         items, skill_changes = [], []
@@ -189,7 +190,9 @@ def build(upstream, root, destination):
         files["ADAPTATION.md"] = (f"# {package['name']}\n\nUnofficial Cindy adaptation of [{upstream_name}]({UPSTREAM}/tree/main/{plugin_path}).\n\n{package['notes']}\n\nOnly the skills listed in ghost.json are included. Cursor rules, hooks, agents and MCP configuration are not loaded.\n\nThese skills run through the main Agent with the user's permissions and are globally available while the plugin is enabled. Dependencies mentioned by a skill must be obtained separately. No extra credentials are bundled.\n\nUse the slash commands named in ghost.json; a plugin-level $command is not provided by this skills-only package.\n").encode()
         # Executable-bit changes affect package behavior and must bump the version too.
         mode_record = {"@executableModes": json_bytes(modes)}
-        digest = fingerprint({**files, **mode_record})
+        # A rewritten upstream description can change provenance even when the
+        # distributed body is identical. Hash its source evidence as well.
+        digest = fingerprint({**files, **mode_record, "@sourceEvidence": json_bytes(skill_changes)})
         previous = old["packages"].get(plugin_id)
         unchanged = previous and previous["fingerprint"] == digest
         version = previous["version"] if unchanged else (bump(previous["version"]) if previous else "1.0.0")

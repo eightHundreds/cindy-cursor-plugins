@@ -4,7 +4,7 @@
   "name": "Cursor SDK Guide · Cursor Skills",
   "description": "Build integrations with the external @cursor/sdk TypeScript package. A coding guide, with separately required Cursor credentials.",
   "whenToUse": "Explicit requests to integrate @cursor/sdk, programmatic Cursor agents, SDK authentication, event streams, cancellation or CI integration.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minCindyVersion": "0.1.126",
   "entry": "main.js",
   "skill": {
