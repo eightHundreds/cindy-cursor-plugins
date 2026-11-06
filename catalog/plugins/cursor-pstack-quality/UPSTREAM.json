@@ -1,0 +1,29 @@
+{
+  "repository": "https://github.com/cursor/plugins",
+  "commit": "2776ddd2355d6d6c8747d3964600f28daf62f049",
+  "path": "pstack",
+  "license": "MIT",
+  "skills": [
+    {
+      "path": "skills/principle-model-the-domain/SKILL.md",
+      "upstreamSha256": "52c0d85e0c3827c41c18299b642657d7b47eaf77b7b31609e42e0df42b84c75f",
+      "distributedSha256": "52c0d85e0c3827c41c18299b642657d7b47eaf77b7b31609e42e0df42b84c75f"
+    },
+    {
+      "path": "skills/principle-test-behavior-not-implementation/SKILL.md",
+      "upstreamSha256": "f7223698623b6a26fea49c751e466b38e6691b1f32ce841d3983e7ffbe2b74a6",
+      "distributedSha256": "f7223698623b6a26fea49c751e466b38e6691b1f32ce841d3983e7ffbe2b74a6"
+    },
+    {
+      "path": "skills/principle-fix-root-causes/SKILL.md",
+      "upstreamSha256": "8df3c8c3fe57eb0055a5c8efab8ab144557fdf301da70b1cdc77a3a3ef3f3052",
+      "distributedSha256": "8df3c8c3fe57eb0055a5c8efab8ab144557fdf301da70b1cdc77a3a3ef3f3052"
+    },
+    {
+      "path": "skills/principle-make-operations-idempotent/SKILL.md",
+      "upstreamSha256": "7aa9327cf1f1aa057e95d47a0a78bd88a8f9d556b608866fee939d455a53a019",
+      "distributedSha256": "7aa9327cf1f1aa057e95d47a0a78bd88a8f9d556b608866fee939d455a53a019"
+    }
+  ],
+  "notes": "Only these four skills are included unchanged. No always-on pstack mode, hooks, team chat, shipping, auto-approval or automation workflow is imported. Original frontmatter is preserved; invocation-field behavior can differ by Cindy agent engine."
+}

@@ -1,0 +1,7 @@
+{
+  "name": "cindy-cursor-plugins-validation",
+  "private": true,
+  "type": "module",
+  "scripts": {"validate:host": "tsx scripts/validate-host.mjs"},
+  "devDependencies": {"tsx": "4.20.6"}
+}

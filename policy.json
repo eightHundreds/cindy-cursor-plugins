@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "packages": [
+    {
+      "id": "cursor-cli-for-agents",
+      "upstream": "cli-for-agent",
+      "name": "CLI for Agents · Cursor Skills",
+      "description": "Design and review CLIs that coding agents can run reliably. Unofficial adaptation of Cursor's skill.",
+      "whenToUse": "Designing command-line tools, non-interactive flags, layered help, pipelines, actionable errors, idempotency and dry runs.",
+      "skills": ["cli-for-agents"],
+      "notes": "The complete CLI design skill is included unchanged. No tools, rules or background processes are installed."
+    },
+    {
+      "id": "cursor-teaching",
+      "upstream": "teaching",
+      "name": "Teaching · Cursor Skills",
+      "description": "Create learning roadmaps and review learning progress with two portable skills from Cursor.",
+      "whenToUse": "Creating a personalized learning path, practice milestones, learning retrospectives or progress reviews.",
+      "skills": ["create-learning-path", "run-learning-retrospective"],
+      "notes": "Both upstream skills are included. The generic Ask user tool reference is adapted to Cindy's available question tool.",
+      "replacements": {
+        "create-learning-path": [{"before": "- Use Ask user tool.", "after": "- Ask the user through Cindy's available question tool when needed."}],
+        "run-learning-retrospective": [{"before": "- Use Ask user tool.", "after": "- Ask the user through Cindy's available question tool when needed."}]
+      }
+    },
+    {
+      "id": "cursor-sdk-guide",
+      "upstream": "cursor-sdk",
+      "name": "Cursor SDK Guide · Cursor Skills",
+      "description": "Build integrations with the external @cursor/sdk TypeScript package. A coding guide, with separately required Cursor credentials.",
+      "whenToUse": "Explicit requests to integrate @cursor/sdk, programmatic Cursor agents, SDK authentication, event streams, cancellation or CI integration.",
+      "skills": ["cursor-sdk"],
+      "notes": "The SDK guide body and its references are included unchanged. Its frontmatter description is shortened to fit Cindy's 1024-character limit. It helps write external integration code; it does not make Cursor the execution engine for Cindy. Using the external SDK requires a separate Cursor account, credentials and dependencies.",
+      "descriptionOverrides": {"cursor-sdk": "Build applications, scripts, CI pipelines and automations with the external @cursor/sdk TypeScript package. Use for explicit Cursor SDK integration requests involving Agent.create, Agent.prompt, Agent.resume, agent.send, run.stream, CursorAgentError, authentication, local versus cloud runtime, MCP configuration, cancellation or error handling. Read the bundled references and current Cursor documentation before relying on SDK details."}
+    },
+    {
+      "id": "cursor-origin-guides",
+      "upstream": "origin-apps",
+      "name": "Origin API Guides · Cursor Skills",
+      "description": "Consult the Cursor Origin API documentation and plan GitHub App ports. Guides only; no Origin connection is installed.",
+      "whenToUse": "Explicit requests about Cursor Origin APIs, Origin Apps, scopes, webhooks or planning a GitHub App port to Origin.",
+      "skills": ["origin-api", "port-github-app-to-origin"],
+      "notes": "Both skills and their references are included unchanged. They need access to live Cursor Origin documentation. This package does not create an account, grant API access, migrate a repository or install an MCP server."
+    },
+    {
+      "id": "cursor-grok-voice-guides",
+      "upstream": "grok-voice",
+      "name": "Grok Voice Guides · Cursor Skills",
+      "description": "Coding guides for adding Grok voice, dictation, read-aloud and development logs to your own app. Requires a separate xAI API account.",
+      "whenToUse": "Explicit requests to build Grok voice, speech-to-text, text-to-speech or voice-session logging in a user's application.",
+      "skills": ["add-voice", "add-dictation", "add-read-aloud", "debug-voice"],
+      "notes": "All four upstream coding guides are included unchanged. They modify an application the user asks to develop; they do not add voice controls to Cindy. API access, xAI billing and application dependencies are separate."
+    },
+    {
+      "id": "cursor-pstack-types",
+      "upstream": "pstack",
+      "name": "pstack Types · Cursor Skills",
+      "description": "Four selected pstack skills about TypeScript, domain types and validation boundaries. Includes no pstack modes or hooks.",
+      "whenToUse": "Reviewing TypeScript types, discriminated unions, external-data validation and encoding recurring rules in structural checks.",
+      "skills": ["typescript-best-practices", "principle-type-system-discipline", "principle-boundary-discipline", "principle-encode-lessons-in-structure"],
+      "notes": "Only these four skills and their local reference files are included unchanged. The complete pstack plugin, modes, rules, automations and external tool integrations are excluded. Original frontmatter is preserved; invocation-field behavior can differ by Cindy agent engine."
+    },
+    {
+      "id": "cursor-pstack-quality",
+      "upstream": "pstack",
+      "name": "pstack Quality · Cursor Skills",
+      "description": "Four selected pstack skills about domain modeling, behavioral tests, root causes and idempotent operations.",
+      "whenToUse": "Modeling stateful code, reviewing test behavior, finding a debugging root cause or designing operations safe to retry.",
+      "skills": ["principle-model-the-domain", "principle-test-behavior-not-implementation", "principle-fix-root-causes", "principle-make-operations-idempotent"],
+      "notes": "Only these four skills are included unchanged. No always-on pstack mode, hooks, team chat, shipping, auto-approval or automation workflow is imported. Original frontmatter is preserved; invocation-field behavior can differ by Cindy agent engine."
+    }
+  ],
+  "exclusions": {
+    "continual-learning": "Depends on Cursor transcript paths and automatic global AGENTS.md updates; needs a Cindy-specific design.",
+    "cursor-team-kit": "Mixed internal tools, Cursor canvases, transcripts and shipping workflows; not adapted as a bundle.",
+    "thermos": "Depends on Cursor agents, review harnesses and orchestration contracts that are not packaged here.",
+    "create-plugin": "Creates Cursor plugins and targets Cursor marketplace validation; not a Cindy plugin creator.",
+    "ralph-loop": "Requires Cursor stop hooks and loop lifecycle integration that Cindy does not load from this repository.",
+    "agent-compatibility": "Requires named subagents and scanner integration; neither is silently mapped to Cindy tools.",
+    "pr-review-canvas": "Requires the Cursor Canvas SDK and built-in canvas skill.",
+    "docs-canvas": "Placeholder upstream skill requiring Cursor Canvas SDK; not a working Cindy documentation UI.",
+    "orchestrate": "Requires Cursor cloud agents and planner/worker/verifier orchestration contracts.",
+    "dyl-stack": "Requires pstack modes, Cursor tooling and UI review integrations; not adapted as a bundle.",
+    "advisor": "Requires Cursor advisor model and tool routing; not mapped to Cindy's configured models.",
+    "x": "Skills depend on an X MCP service and tool contract; native authentication and tool integration are absent.",
+    "x-money": "Depends on X Money MCP authentication and financial tools; not a portable standalone skill.",
+    "google-drive": "Skills require Google Drive MCP tools and OAuth; no native Cindy tool or account binding is included.",
+    "google-docs": "Skills require Google Docs MCP tools and OAuth; no native Cindy tool or account binding is included.",
+    "google-sheets": "Skills require Google Sheets MCP tools and OAuth; no native Cindy tool or account binding is included.",
+    "google-slides": "Skills require Google Slides MCP tools and OAuth; no native Cindy tool or account binding is included.",
+    "tailscale": "Requires Grok-specific tailnet connection tools and account binding; not a portable standalone skill."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "repository": "https://github.com/cursor/plugins",
+  "commit": "2776ddd2355d6d6c8747d3964600f28daf62f049",
+  "path": "grok-voice",
+  "license": "MIT",
+  "skills": [
+    {
+      "path": "skills/add-voice/SKILL.md",
+      "upstreamSha256": "699b0bf878d06a1205a5d0971152ef55a38454145f88e04d419c89de608bce9d",
+      "distributedSha256": "699b0bf878d06a1205a5d0971152ef55a38454145f88e04d419c89de608bce9d"
+    },
+    {
+      "path": "skills/add-dictation/SKILL.md",
+      "upstreamSha256": "72920f9582169131b64c2c947020ee379466962c4143b0ed20533bec4f7aa75b",
+      "distributedSha256": "72920f9582169131b64c2c947020ee379466962c4143b0ed20533bec4f7aa75b"
+    },
+    {
+      "path": "skills/add-read-aloud/SKILL.md",
+      "upstreamSha256": "5b11114611f0950e9973b0e87a2c7562bec72ded8d46ef664249f143dd00b280",
+      "distributedSha256": "5b11114611f0950e9973b0e87a2c7562bec72ded8d46ef664249f143dd00b280"
+    },
+    {
+      "path": "skills/debug-voice/SKILL.md",
+      "upstreamSha256": "0bd730539335ceff9c10570c12c2b98518b2c5dc30be401a93b3e782de751f2c",
+      "distributedSha256": "0bd730539335ceff9c10570c12c2b98518b2c5dc30be401a93b3e782de751f2c"
+    }
+  ],
+  "notes": "All four upstream coding guides are included unchanged. They modify an application the user asks to develop; they do not add voice controls to Cindy. API access, xAI billing and application dependencies are separate."
+}

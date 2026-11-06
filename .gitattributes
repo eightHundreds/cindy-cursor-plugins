@@ -1,0 +1,2 @@
+# Preserve upstream Markdown hard breaks and trailing blank lines byte-for-byte.
+catalog/plugins/** -whitespace

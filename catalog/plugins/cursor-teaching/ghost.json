@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 3,
+  "id": "cursor-teaching",
+  "name": "Teaching · Cursor Skills",
+  "description": "Create learning roadmaps and review learning progress with two portable skills from Cursor.",
+  "whenToUse": "Creating a personalized learning path, practice milestones, learning retrospectives or progress reviews.",
+  "version": "1.0.0",
+  "minCindyVersion": "0.1.126",
+  "entry": "main.js",
+  "skill": {
+    "items": [
+      {
+        "dir": "skills/create-learning-path",
+        "name": "create-learning-path",
+        "description": "Build a personalized learning roadmap with milestones and practice checkpoints"
+      },
+      {
+        "dir": "skills/run-learning-retrospective",
+        "name": "run-learning-retrospective",
+        "description": "Evaluate learning progress, identify blockers, and adjust the learning plan"
+      }
+    ]
+  },
+  "releaseNotes": "Adapt teaching skills from cursor/plugins at 2776ddd2355d. See ADAPTATION.md and UPSTREAM.json for scope and changes."
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 3,
+  "id": "cursor-cli-for-agents",
+  "name": "CLI for Agents · Cursor Skills",
+  "description": "Design and review CLIs that coding agents can run reliably. Unofficial adaptation of Cursor's skill.",
+  "whenToUse": "Designing command-line tools, non-interactive flags, layered help, pipelines, actionable errors, idempotency and dry runs.",
+  "version": "1.0.0",
+  "minCindyVersion": "0.1.126",
+  "entry": "main.js",
+  "skill": {
+    "items": [
+      {
+        "dir": "skills/cli-for-agents",
+        "name": "cli-for-agents",
+        "description": "Designs or reviews CLIs so coding agents can run them reliably: non-interactive flags, layered --help with examples, stdin/pipelines, fast actionable errors, idempotency, dry-run, and predictable structure. Use when building a CLI, adding commands, writing --help, or when the user mentions agents, terminals, or automation-friendly CLIs."
+      }
+    ]
+  },
+  "releaseNotes": "Adapt cli-for-agent skills from cursor/plugins at 2776ddd2355d. See ADAPTATION.md and UPSTREAM.json for scope and changes."
+}

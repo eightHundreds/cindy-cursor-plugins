@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "upstream": "https://github.com/cursor/plugins",
+  "commit": "2776ddd2355d6d6c8747d3964600f28daf62f049",
+  "packages": {
+    "cursor-cli-for-agents": {
+      "version": "1.0.0",
+      "fingerprint": "28770c8cbe161405f0480e2416bfb5bd3eb182e258b59f28b49fcfc2194d412b",
+      "contentCommit": "2776ddd2355d6d6c8747d3964600f28daf62f049",
+      "active": true,
+      "outputFingerprint": "ebad75d953c8935cdece9eb739278b40188caa952e838b0065cce3d4b7bbe447"
+    },
+    "cursor-teaching": {
+      "version": "1.0.0",
+      "fingerprint": "94efeb287a36b3cd49f40e39adedaaaf1ded5047fa8af76cb6c03b36fcaf11da",
+      "contentCommit": "2776ddd2355d6d6c8747d3964600f28daf62f049",
+      "active": true,
+      "outputFingerprint": "efb7ea5afd46a2a205fd4cc15eac900100a54a7232c5ce544ca16bc5bab05760"
+    },
+    "cursor-sdk-guide": {
+      "version": "1.0.0",
+      "fingerprint": "11a3ca7a758985de921f8d48d096e77f2a00d51476d7f3ea242ebcdc495fa4e9",
+      "contentCommit": "2776ddd2355d6d6c8747d3964600f28daf62f049",
+      "active": true,
+      "outputFingerprint": "c6a64086626d2bb148144a734713d8d99e3d88fccac9232fb4717dd4fc85c1bb"
+    },
+    "cursor-origin-guides": {
+      "version": "1.0.0",
+      "fingerprint": "5eec97c1c4e48b89d1925e93cde7b56ab0abd0018c48095e731a19ef419be569",
+      "contentCommit": "2776ddd2355d6d6c8747d3964600f28daf62f049",
+      "active": true,
+      "outputFingerprint": "ff4a539b2d7000587cd032e35de637f9ed173444fe0f8641b14ed15c747a55fa"
+    },
+    "cursor-grok-voice-guides": {
+      "version": "1.0.0",
+      "fingerprint": "99ffc676ce6904be92fb21bffba9d5d73dab7d132d7a0676476bb627b0288dc7",
+      "contentCommit": "2776ddd2355d6d6c8747d3964600f28daf62f049",
+      "active": true,
+      "outputFingerprint": "257c49fedb2341784ca0c00c68c3074d20be6e09230a25b31905af0a9c993cb9"
+    },
+    "cursor-pstack-types": {
+      "version": "1.0.0",
+      "fingerprint": "5e5b3da53aaf4ed74b1d6d7cb331e670ae0351f4c13c6225784c112f1852e32e",
+      "contentCommit": "2776ddd2355d6d6c8747d3964600f28daf62f049",
+      "active": true,
+      "outputFingerprint": "53a49fa2e6a37f40e9a544fd7c1aa00587b749f004a7a24f947fdf17d6419fd8"
+    },
+    "cursor-pstack-quality": {
+      "version": "1.0.0",
+      "fingerprint": "3ece0bd026bff865662fc4bc1fc2b3996857be7c42c576a2985bb7297cf52846",
+      "contentCommit": "2776ddd2355d6d6c8747d3964600f28daf62f049",
+      "active": true,
+      "outputFingerprint": "5ad7cef543643a821c8e6e1255a15bfc8d6196eda065f5087bb0e311288f6bba"
+    }
+  }
+}

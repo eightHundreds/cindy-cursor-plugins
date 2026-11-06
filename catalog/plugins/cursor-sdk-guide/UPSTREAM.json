@@ -1,0 +1,14 @@
+{
+  "repository": "https://github.com/cursor/plugins",
+  "commit": "2776ddd2355d6d6c8747d3964600f28daf62f049",
+  "path": "cursor-sdk",
+  "license": "MIT",
+  "skills": [
+    {
+      "path": "skills/cursor-sdk/SKILL.md",
+      "upstreamSha256": "3fbe439f366ea94e0a756fc7288d2d8bd3f871bed4b97219dc1aee2f8c8ab979",
+      "distributedSha256": "7afb501aa76661f2b8875866f6a2d0870d7015944117e6b0e60602145a1a6fc1"
+    }
+  ],
+  "notes": "The SDK guide body and its references are included unchanged. Its frontmatter description is shortened to fit Cindy's 1024-character limit. It helps write external integration code; it does not make Cursor the execution engine for Cindy. Using the external SDK requires a separate Cursor account, credentials and dependencies."
+}

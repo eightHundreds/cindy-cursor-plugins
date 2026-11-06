@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 3,
+  "id": "cursor-grok-voice-guides",
+  "name": "Grok Voice Guides · Cursor Skills",
+  "description": "Coding guides for adding Grok voice, dictation, read-aloud and development logs to your own app. Requires a separate xAI API account.",
+  "whenToUse": "Explicit requests to build Grok voice, speech-to-text, text-to-speech or voice-session logging in a user's application.",
+  "version": "1.0.0",
+  "minCindyVersion": "0.1.126",
+  "entry": "main.js",
+  "skill": {
+    "items": [
+      {
+        "dir": "skills/add-voice",
+        "name": "add-voice",
+        "description": "Use when the user runs /add-voice, types Voice Mode, or asks to add Grok realtime voice to an app, including replacing an STT-LLM-TTS cascade or OpenAI Realtime.   Wire speech-to-speech, safe auth, and app mic. Composer: waveform button, mic icon reserved for dictation. For mic-to-text only use /add-dictation; to speak text replies use /add-read-aloud. To add debug logging and fix from logs use /debug-voice."
+      },
+      {
+        "dir": "skills/add-dictation",
+        "name": "add-dictation",
+        "description": "Use when the user runs /add-dictation or wants speech turned into text with Grok speech-to-text: a mic button that dictates into the composer, live captions, or transcribing recorded audio (files, uploads, URLs) with word timestamps, diarization, subtitles, meeting notes. STT, transcribe, transcription. For a voice agent that talks back use /add-voice."
+      },
+      {
+        "dir": "skills/add-read-aloud",
+        "name": "add-read-aloud",
+        "description": "Use when the user runs /add-read-aloud or wants the app to speak text with Grok text-to-speech: read-aloud button on assistant replies, auto-speak, TTS, voice output, narration, IVR prompts, speech tags, voice_id. For a two-way voice agent use /add-voice. For speech-to-text use /add-dictation."
+      },
+      {
+        "dir": "skills/debug-voice",
+        "name": "debug-voice",
+        "description": "Use when the user runs /debug-voice, says voice mode has flaws, asks to see or capture what happened in a Grok realtime voice session, or a voice integration has no debug logging yet. Proposes a plan, then installs a dev-only log pipeline (client logger → local NDJSON) in the app's own language and conventions, then runs the fix loop: match the user's report to log signatures, fix one thing, re-test."
+      }
+    ]
+  },
+  "releaseNotes": "Adapt grok-voice skills from cursor/plugins at 2776ddd2355d. See ADAPTATION.md and UPSTREAM.json for scope and changes."
+}
