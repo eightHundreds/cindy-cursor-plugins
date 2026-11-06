@@ -1,0 +1,134 @@
+---
+name: poteto-help
+description: Guides users through pstack setup, /poteto-mode, and picking the skill, playbook, or principle for a task. Type poteto-help (bundled reference; see entry index) with a question.
+disable-model-invocation: true
+---
+
+# Poteto help
+
+Cindy adaptation: only /poteto-mode is registered. Other slash names in this upstream reference denote bundled files in the entry index, not installed commands. Cursor setup, Custom Modes, /loop, and Cursor plugin installation are not supplied here. Report unavailable capabilities instead of instructing the user to install Cursor components. Linked upstream documentation is not bundled; if offline or inaccessible, report it unavailable and do not claim to have read it.
+
+Answer the user's question about pstack, hand them a prompt they can send, and link the file the answer came from. For a help question, don't start the work. The user asked how, and a pstack run spends real tokens, so let them send the prompt.
+
+A message that asks for work, such as "use pstack to fix this bug", is not a help question. Read [`poteto-mode`](../../SKILL.md), do the work under it, and use the available Cindy entry.
+
+This file maps questions to the skills and guide pages that hold the answers. Those files own the details. Read the file you route to before you quote it, and trust it when it disagrees with this map. The links here point into the installed plugin, which the user may not be able to open, so give the user the file's public copy: `https://github.com/cursor/plugins/blob/2776ddd2355d6d6c8747d3964600f28daf62f049/pstack/` followed by its path.
+
+## Find out what they need
+
+Infer the need from the message and the conversation. A named situation, such as "which skill reviews a PR?", goes straight to its section. If the need is still unclear, ask one multiple-choice question with these options, then answer only the section they pick:
+
+- Get set up
+- Start a task with `/poteto-mode`
+- Pick a skill for a situation
+- Fix a run that went wrong
+- Make pstack my own
+
+## Get set up
+
+Install and enable this Cindy plugin, then invoke `/poteto-mode` with a goal and a verifiable check. Only that entry is registered. Other pstack skills are references linked in its index. Cursor model setup and Custom Modes are not provided; choose among models available in the current Cindy engine. Explain missing tools and permissions rather than promising Cursor features.
+
+## Start a task with `/poteto-mode`
+
+`/poteto-mode` matches the task to a playbook, copies the playbook's steps into the todo list, and runs the other skills as the steps need them. A step it skips stays in the list as `skip: <reason>`. A good prompt states the goal and how to tell it's done. It doesn't list skills, because a hand-written sequence tends to drop or reorder steps the playbook would keep. Read [`references/prompting.md`](references/prompting.md) before you help word one. [Guide page 2](https://github.com/cursor/plugins/blob/2776ddd2355d6d6c8747d3964600f28daf62f049/pstack/docs/guide/02-poteto-mode.md) has examples.
+
+Invoke `/poteto-mode` for each task as supported by the current Cindy engine. For delegates, use available general-purpose agents with the complete bundled agent prompt and the entry realpath.
+
+## Pick a skill
+
+The default answer is `/poteto-mode`, which runs most of the others when its steps need them. Name a skill directly when the user wants more or less of something than the playbook gives. Read the skill before you recommend it, and give one example prompt.
+
+| The user wants to | Skill |
+|---|---|
+| Do any non-trivial task with rigor | [`/poteto-mode`](../../SKILL.md) |
+| Check that the agent understood their goal and the problem before it starts | [`in-your-own-words (bundled reference; see entry index)`](../in-your-own-words/SKILL.txt) |
+| Get a prompt rewritten deeper, not bigger, before sending it: what a top professional would add, their raw material and methods, and an outside check. It returns the prompt and doesn't do the task | [`sharpen (bundled reference; see entry index)`](../sharpen/SKILL.txt) |
+| Know how code works now, or where new code should live | [`how (bundled reference; see entry index)`](../how/SKILL.txt) |
+| Know why code is shaped this way, or where a number came from | [`why (bundled reference; see entry index)`](../why/SKILL.txt) |
+| Understand a change or subsystem, explained plainly | [`teach (bundled reference; see entry index)`](../teach/SKILL.txt) |
+| Catch up on their own recent work on a topic | [`recall (bundled reference; see entry index)`](../recall/SKILL.txt) |
+| Catch up on what changed in this chat since their last message, in plain words and small visuals, with every item waiting on them listed and decidable from the reply alone | [`ketchup (bundled reference; see entry index)`](../ketchup/SKILL.txt) |
+| Catch up like `ketchup (bundled reference; see entry index)`, in a short subtitled video of slides, with the waiting calls as text under it | [`ketchup-video (bundled reference; see entry index)`](../ketchup-video/SKILL.txt) |
+| Know what a small diff could break outside itself | [`blast-radius (bundled reference; see entry index)`](../blast-radius/SKILL.txt) |
+| Settle types and module shape before code that crosses a function boundary | [`architect (bundled reference; see entry index)`](../architect/SKILL.txt) |
+| Get several attempts at one brief, merged into the best one | [`arena (bundled reference; see entry index)`](../arena/SKILL.txt) |
+| Run parallel checks over slices, or race workers, as cloud agents | [`swarm (bundled reference; see entry index)`](../swarm/SKILL.txt) |
+| Have different models review a diff and try to break it | [`interrogate (bundled reference; see entry index)`](../interrogate/SKILL.txt) |
+| Fix a bug test-first when a cheap local test exists | [`tdd (bundled reference; see entry index)`](../tdd/SKILL.txt) |
+| Apply TypeScript rules to `.ts` or `.tsx` work | [`typescript-best-practices (bundled reference; see entry index)`](../typescript-best-practices/SKILL.txt) |
+| Strip comments before review, using a reviewer that didn't write them | [`no-comments (bundled reference; see entry index)`](../no-comments/SKILL.txt) |
+| Clean AI tells out of prose | [`unslop (bundled reference; see entry index)`](../unslop/SKILL.txt) |
+| Write docs, an RFC, a README, a PR description, or a commit message to a standard | [`technical-writing (bundled reference; see entry index)`](../technical-writing/SKILL.txt) |
+| Hear the last reply again in plain words | [`bro (bundled reference; see entry index)`](../bro/SKILL.txt) |
+| Give agents a scripted way to drive the app and prove behavior | [`create-verification-skill (bundled reference; see entry index)`](../create-verification-skill/SKILL.txt) |
+| Bring a verification skill and its feature map back in line with the app | [`maintain-verification-skill (bundled reference; see entry index)`](../maintain-verification-skill/SKILL.txt) |
+| Formally verify a race, invariant, or other property that tests rarely reach | [`create-formal-verification-skill (bundled reference; see entry index)`](../create-formal-verification-skill/SKILL.txt) |
+| Bring a formal verification back in line after the code it covers changed, and learn whether a failure is drift or a bug | [`maintain-formal-verification-skill (bundled reference; see entry index)`](../maintain-formal-verification-skill/SKILL.txt) |
+| Show a PM or designer what the user sees as a chart checked by a TLA+ model, with the shortest path to each state that breaks a rule | [`statechart (bundled reference; see entry index)`](../statechart/SKILL.txt) |
+| Vet a performance number before reporting or acting on it | [`benchmark-checklist (bundled reference; see entry index)`](../benchmark-checklist/SKILL.txt) |
+| Run a large or cross-cutting change, or one to review after stepping away | [`figure-it-out (bundled reference; see entry index)`](../figure-it-out/SKILL.txt) |
+| Keep a decision log during a run, and review it afterward | [`show-me-your-work (bundled reference; see entry index)`](../show-me-your-work/SKILL.txt) |
+| Pick a model for each role and a reasoning budget | [`setup-pstack (bundled reference; see entry index)`](../setup-pstack/SKILL.txt) |
+| Turn their own working habits into a personal mode skill | [`automate-me (bundled reference; see entry index)`](../automate-me/SKILL.txt) |
+| Turn what a finished task taught into skill edits | [`reflect (bundled reference; see entry index)`](../reflect/SKILL.txt) |
+| Stop agents from repeating the same mistakes in this repo | [`correct (bundled reference; see entry index)`](../correct/SKILL.txt) |
+| Build a page whose buttons wake a Grok Bot over a webhook | [`make-bot-ui (bundled reference; see entry index)`](../make-bot-ui/SKILL.txt) |
+| Find their way around pstack | `poteto-help (bundled reference; see entry index)` |
+
+If a skill directory next to this one is missing from the table, read its frontmatter and route by its description. The `principle-*` directories are covered under principles below.
+
+Close calls:
+
+- `how (bundled reference; see entry index)` explains what the code does. `why (bundled reference; see entry index)` explains the reasons. `teach (bundled reference; see entry index)` runs one or both and explains the result plainly.
+- `arena (bundled reference; see entry index)` gives every worker the same brief and merges the best parts. `swarm (bundled reference; see entry index)` splits work into slices or a race and returns one report.
+- `architect (bundled reference; see entry index)` implements right after it settles the design. Add "with checkpoint" to review the design before it writes code.
+- `interrogate (bundled reference; see entry index)` reviews the diff. `blast-radius (bundled reference; see entry index)` looks for breakage outside the diff and proves the one fact that makes the change safe.
+- `recall (bundled reference; see entry index)` rebuilds context across recent chats. `ketchup (bundled reference; see entry index)` covers only this chat since the user's last message. Resuming one specific chat or branch is the Session pickup playbook.
+- `figure-it-out (bundled reference; see entry index)` designs one rigorous run. The Orchestrate playbook runs a program that spans days and many PRs. The Autonomous run playbook drives one task to a finish condition.
+
+Bundled references include unslop and no-comments. Cindy terminal tools and cindy_browser depend on the current session. Cursor /loop is not bundled.
+
+## Playbooks and principles
+
+Playbooks are step lists inside `/poteto-mode`, not skills, so they have no slash command. Inside `/poteto-mode`, describing the task picks one, and these phrases name one directly:
+
+- "babysit this pr" or "check on pr 123" runs Babysit. It drives the PR to merge-ready and stops there. It doesn't merge unless the user asks to merge, land, or ship.
+- "land the stack" runs Shipping.
+- "take over this branch" runs Session pickup.
+- "pause safely" runs Pause safely.
+- "full autopilot on this queue" runs Autopilot-full. "autopilot, don't merge" runs Autopilot-stack.
+- "run the eval playbook" runs Eval.
+
+Invoke `/poteto-mode` to use these playbooks in Cindy. The Playbooks section of [`poteto-mode`](../../SKILL.md) lists every playbook and when it applies. [Guide page 6](https://github.com/cursor/plugins/blob/2776ddd2355d6d6c8747d3964600f28daf62f049/pstack/docs/guide/06-verify-and-ship.md) covers opening, babysitting, and landing a PR.
+
+pstack has no planning skill. Use planning capabilities available in the current engine. For work that spans phases or stacked PRs, asking `/poteto-mode` for a plan runs the [Multi-phase plan playbook](../../playbooks/multi-phase-plan.md), which writes the plan and doesn't implement it. For a design question, the Prototype playbook or `architect (bundled reference; see entry index)` settles it in code first.
+
+Principles are one-rule skills that `/poteto-mode` reads and cites in its replies. The user rarely invokes one. They steer with the names instead, as in "apply prove it works. show me the real output." Read the matching principle reference from the entry index. [Guide page 8](https://github.com/cursor/plugins/blob/2776ddd2355d6d6c8747d3964600f28daf62f049/pstack/docs/guide/08-principles.md) lists them.
+
+## Fix a run that went wrong
+
+| Symptom | Fix |
+|---|---|
+| The mode stopped applying after a few turns | Start each task with `/poteto-mode` as supported by the current engine. |
+| A question got treated as the next step of the last task | Say "new task", or say the turn doesn't need the mode. |
+| A new model choice had no effect | Cindy does not install a Cursor model rule. Check the model actually available in the current session. |
+| Runs cost more than expected | Check model and execution costs for the current engine. |
+| A skill didn't load on its own | Only `/poteto-mode` is registered; the other bundled workflows are references the entry reads as needed. |
+| Parallel agents overwrote each other | Give each agent its own worktree, or run them as cloud agents, which each get their own machine. |
+| An overnight run moved but finished nothing | Cursor /loop is unavailable; use an authorized supported wake mechanism or stop and report it. See [guide page 7](https://github.com/cursor/plugins/blob/2776ddd2355d6d6c8747d3964600f28daf62f049/pstack/docs/guide/07-overnight.md). |
+| The reply claims success from a green build | Ask for the real command, flow, stored value, or profile. That's the prove-it-works principle. |
+
+For a run that drifts, [`references/prompting.md`](references/prompting.md) has one-line steers. [Guide page 10](https://github.com/cursor/plugins/blob/2776ddd2355d6d6c8747d3964600f28daf62f049/pstack/docs/guide/10-recipes-and-pitfalls.md) has more pitfalls and the recipes worth copying.
+
+## Make pstack my own
+
+- [`automate-me (bundled reference; see entry index)`](../automate-me/SKILL.txt) drafts a personal mode skill from the user's own history, to use alongside `/poteto-mode`.
+- [`reflect (bundled reference; see entry index)`](../reflect/SKILL.txt) after a session turns its lessons into skill edits the user approves.
+- `/poteto-mode write a skill for <workflow>` runs the authoring playbook. The eval playbook tests a skill change blind.
+- Fix a misbehaving skill in its own PR, not inside the feature work where it went wrong.
+
+[Guide page 9](https://github.com/cursor/plugins/blob/2776ddd2355d6d6c8747d3964600f28daf62f049/pstack/docs/guide/09-make-it-yours.md) covers each of these.
+
+## Reply
+
+Lead with the answer. Give at most one example prompt in a code block, adapted from [`references/recipes.md`](references/recipes.md) when one fits, then the link to that file. Keep it short unless the user asked for the whole map.

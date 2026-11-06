@@ -1,0 +1,299 @@
+{
+  "repository": "https://github.com/cursor/plugins",
+  "commit": "2776ddd2355d6d6c8747d3964600f28daf62f049",
+  "path": "pstack",
+  "license": "MIT",
+  "skills": [
+    {
+      "path": "skills/poteto-mode/bundled/architect/SKILL.txt",
+      "upstreamSha256": "31f8e97a52bfa5432edd61f68ade2a8632ef0bacbc2d2a6802d7a0e6821944ac",
+      "distributedSha256": "919c902514b27b2d9de805d23d222aa0a9136f47572863600de9a75392d4c41b"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/arena/SKILL.txt",
+      "upstreamSha256": "d0adeca6c9b19d43d90ed8f0484f0ddd362f05006d628b8f4cc6c9b55fa4d2b3",
+      "distributedSha256": "beeb699207569ea5c51feeafafdab208b1c54c5087073d1e8ee3d1f357e3a7dc"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/automate-me/SKILL.txt",
+      "upstreamSha256": "30b35f3628c4fd8c11af0ada06d14cdc3b28901810caca2480f627d4d21acfbe",
+      "distributedSha256": "3ce888fa45c8ec329fbb6c5db2b02d1130e5ab62acdcaef3e755853eb9673c4c"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/benchmark-checklist/SKILL.txt",
+      "upstreamSha256": "ba109e96c8f6c1c391baccf19e5d11e14370df7b3f2605e1572cd565a6c0fca0",
+      "distributedSha256": "ba109e96c8f6c1c391baccf19e5d11e14370df7b3f2605e1572cd565a6c0fca0"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/blast-radius/SKILL.txt",
+      "upstreamSha256": "2e10745b97f5862323dcda3b29ca60d56b5c3c98e37020085d26b48efbe0a436",
+      "distributedSha256": "2e10745b97f5862323dcda3b29ca60d56b5c3c98e37020085d26b48efbe0a436"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/bro/SKILL.txt",
+      "upstreamSha256": "aa329d0ceeeecb6822a7174ad76bb07a7826a3c52ceb6a588dec4138815084bb",
+      "distributedSha256": "aa329d0ceeeecb6822a7174ad76bb07a7826a3c52ceb6a588dec4138815084bb"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/correct/SKILL.txt",
+      "upstreamSha256": "e347045d00c967a0b831ef883cc6ac79d21329aa10b5968637df95de7febf0ba",
+      "distributedSha256": "da17426b6bda6c8a685ea5f02243bf889f6915c40ab58386788a69ffc43358e2"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/create-formal-verification-skill/SKILL.txt",
+      "upstreamSha256": "30ef0ac27612ecd16fdc081112113221d673053cef3f8603db11932193861211",
+      "distributedSha256": "801e3ccc374dea2aee40106c3d34cfac96419bb063f55db7a153c7c89815c218"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/create-verification-skill/SKILL.txt",
+      "upstreamSha256": "d353973547bf8ad8977eca645f4cd4feaed0d32f4b43d1448f906b0a76c4d694",
+      "distributedSha256": "69bce43a33a228d20bdd83c0ed25b358645cd487d5911a98b2297f737a590433"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/figure-it-out/SKILL.txt",
+      "upstreamSha256": "bdb23cdbd82a1e6af094b495691c832a6f7f3ab9706ba9edbeb664ef51a726e1",
+      "distributedSha256": "f850a6ed38160f27fb8539b756eb6b56628ad421a74c846d93cae0fc0c50d0f6"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/how/SKILL.txt",
+      "upstreamSha256": "08a00079bb15b4258874ac3ff62d4ca7e94350ffedb521d0fd296dc9dd21904e",
+      "distributedSha256": "86b1ca505c5bf673f9b0f55ee1715d03a60ab6a858943fff95dad4a8d1ceb3d5"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/in-your-own-words/SKILL.txt",
+      "upstreamSha256": "fa8ba74e27d7be371dc270ec78bbf816411477d0dfab185356c861ac8dd413ad",
+      "distributedSha256": "4b6729a718bbdc87bd4cfa1ff0005b6f64f532a453ed7fc82fb5af5a15f38cec"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/interrogate/SKILL.txt",
+      "upstreamSha256": "3f3c2e9b8cf6b180dba9f32a4aff85e5691b09805232468e37a0ba45437a9984",
+      "distributedSha256": "3f3c2e9b8cf6b180dba9f32a4aff85e5691b09805232468e37a0ba45437a9984"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/ketchup/SKILL.txt",
+      "upstreamSha256": "f2923ffd14f6fc778f75a47aaed1f317fb5fd00b5701ca769d6446c74106dead",
+      "distributedSha256": "1264069ec9c161015ed8f6b6f677ec3c7b1ac45c6c84b31f7821b731dffb4e4b"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/ketchup-video/SKILL.txt",
+      "upstreamSha256": "027aed9a01adf208aeac3a134f47d12f7c1e42d6fea03095aedc2bae58cdcfd1",
+      "distributedSha256": "d672e5e4c994946aaf2e87c14e025b53b1b74b4aa906da8848e384b8467e9b0e"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/maintain-formal-verification-skill/SKILL.txt",
+      "upstreamSha256": "0c96f54293542d3818b68754562b338073958781a9684454611dca37592e2d2c",
+      "distributedSha256": "66aea8dc8e7d1dba99eea60071fb00c152c254a21f2af87ac26fc63b1f5362e0"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/maintain-verification-skill/SKILL.txt",
+      "upstreamSha256": "515c0eaa054b3f6be1b1fb06f2c2f173c80fddb58bbcac57576f89c479bc68e8",
+      "distributedSha256": "2685dece9a22f0dc101b9868a1ab102872e8041a6968d435aab7dae7cbf8c611"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/make-bot-ui/SKILL.txt",
+      "upstreamSha256": "ad19d0bc6764287ec08c2521701974e7dac941f72e4d0fe81a24f4614494586f",
+      "distributedSha256": "6875861b8a5a1cda2c93e98849224030cd74b5f696babbbbe8ced3a3efcb74bc"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/no-comments/SKILL.txt",
+      "upstreamSha256": "078ecfe224eafbb017f6476870612838bf6dbe38c0b697e12f0c887d0313f17e",
+      "distributedSha256": "13bec073278d75f91d5263b9dfc261704fd4b92e664cc62e4732fc8e98546bb1"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/poteto-help/SKILL.txt",
+      "upstreamSha256": "768368881379d688c4e3bbdae55dd2d7874fde98a258324d3527de1bf09f9bd1",
+      "distributedSha256": "d2c858105c88ef2f2646968e935cb5ac42c9bd4ebfca831a734c0e0fb276c5ac"
+    },
+    {
+      "path": "skills/poteto-mode/SKILL.md",
+      "upstreamSha256": "ee1848c973a112026f09ba12ea7a13c1654006e7bf170d1c34bf5d5816bc439b",
+      "distributedSha256": "ade1ddf23e5dba4a4181a3d37670be4f0a44d7e0f62f8458eed3fc5f08cafe2f"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/principle-attack-the-premise/SKILL.txt",
+      "upstreamSha256": "6a932884daad4aa189e9b5d1665226bbc75621d4d2a398fd4003bebd382f4599",
+      "distributedSha256": "90b7f93caa9eb2fce1f4f01ce1047f0e4e0e1a5a43953d43cb37ccb808815ba2"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/principle-boundary-discipline/SKILL.txt",
+      "upstreamSha256": "62ac2862c2caa22dd14531f51c9c6bb445ceb198ca98a687e25b4d47c1f10a28",
+      "distributedSha256": "62ac2862c2caa22dd14531f51c9c6bb445ceb198ca98a687e25b4d47c1f10a28"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/principle-build-the-lever/SKILL.txt",
+      "upstreamSha256": "3434b0ad0c640c6f1d7960be7a8986c3bcdc14e26060360dec29903df60074ff",
+      "distributedSha256": "b84fe40f33310659add433a3e40133522bdf458c3adb14dd05818a23dbc10002"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/principle-encode-lessons-in-structure/SKILL.txt",
+      "upstreamSha256": "228963799189f481827d6f28065f278bc2008ffa37030b1234cbd5814d36b9e9",
+      "distributedSha256": "228963799189f481827d6f28065f278bc2008ffa37030b1234cbd5814d36b9e9"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/principle-exhaust-the-design-space/SKILL.txt",
+      "upstreamSha256": "2de83d99f93f60ec6313455b0bc9aa9f0bfb93dd59f414f403691322db00d4db",
+      "distributedSha256": "2de83d99f93f60ec6313455b0bc9aa9f0bfb93dd59f414f403691322db00d4db"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/principle-experience-first/SKILL.txt",
+      "upstreamSha256": "58903529d733b1c1a7c9ccf127d45ef3c7d0d9f0b81164a4dc6b80efe6f2912b",
+      "distributedSha256": "58903529d733b1c1a7c9ccf127d45ef3c7d0d9f0b81164a4dc6b80efe6f2912b"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/principle-explain-the-number/SKILL.txt",
+      "upstreamSha256": "3c84fbf9a7d9842abcfcd134010782b32092ac3d3fb4aaf9ed5732dca83aa58c",
+      "distributedSha256": "cecda48ad96b528fc52b88b56891b2a990f80e4609f3c4459421d822f75669b8"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/principle-fix-root-causes/SKILL.txt",
+      "upstreamSha256": "8df3c8c3fe57eb0055a5c8efab8ab144557fdf301da70b1cdc77a3a3ef3f3052",
+      "distributedSha256": "8df3c8c3fe57eb0055a5c8efab8ab144557fdf301da70b1cdc77a3a3ef3f3052"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/principle-foundational-thinking/SKILL.txt",
+      "upstreamSha256": "864b827e8199d946ce58beca0f89c4ed4099ed6e426fb698a3aaa45de2a9eea2",
+      "distributedSha256": "864b827e8199d946ce58beca0f89c4ed4099ed6e426fb698a3aaa45de2a9eea2"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/principle-guard-the-context-window/SKILL.txt",
+      "upstreamSha256": "af0b9dd70b43628ce4a59a4d332e9d9ad055084e460f430e7a757495c627e81a",
+      "distributedSha256": "af0b9dd70b43628ce4a59a4d332e9d9ad055084e460f430e7a757495c627e81a"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/principle-laziness-protocol/SKILL.txt",
+      "upstreamSha256": "1be6e7a435f26a75a76eb848b9c3d611b9977d0f5822361753244da25ca3ca45",
+      "distributedSha256": "1be6e7a435f26a75a76eb848b9c3d611b9977d0f5822361753244da25ca3ca45"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/principle-make-operations-idempotent/SKILL.txt",
+      "upstreamSha256": "7aa9327cf1f1aa057e95d47a0a78bd88a8f9d556b608866fee939d455a53a019",
+      "distributedSha256": "7aa9327cf1f1aa057e95d47a0a78bd88a8f9d556b608866fee939d455a53a019"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/principle-migrate-callers-then-delete-legacy-apis/SKILL.txt",
+      "upstreamSha256": "580ad9bb1a0994ecb924321ba49efc38a2f85c64e22c76fb133f57a78272a2e6",
+      "distributedSha256": "580ad9bb1a0994ecb924321ba49efc38a2f85c64e22c76fb133f57a78272a2e6"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/principle-minimize-reader-load/SKILL.txt",
+      "upstreamSha256": "1ea2b7fef2391cae5844c4efdbd59031f775e8a52d06b7495d707229a200dcca",
+      "distributedSha256": "14d1900a4fb6ee6a38a73a40c4b580b619262cb99596188d961f52004b2ca9db"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/principle-model-the-domain/SKILL.txt",
+      "upstreamSha256": "52c0d85e0c3827c41c18299b642657d7b47eaf77b7b31609e42e0df42b84c75f",
+      "distributedSha256": "52c0d85e0c3827c41c18299b642657d7b47eaf77b7b31609e42e0df42b84c75f"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/principle-never-block-on-the-human/SKILL.txt",
+      "upstreamSha256": "05030a7a083c337676f793881b4e93cd218e8f1dd676529f56e6ac1d3efb8d1f",
+      "distributedSha256": "05030a7a083c337676f793881b4e93cd218e8f1dd676529f56e6ac1d3efb8d1f"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/principle-outcome-oriented-execution/SKILL.txt",
+      "upstreamSha256": "10eb91633aa570355ba4bb37088fcade2b22e498df7a58edc749e65bc5a78e2d",
+      "distributedSha256": "10eb91633aa570355ba4bb37088fcade2b22e498df7a58edc749e65bc5a78e2d"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/principle-prove-it-works/SKILL.txt",
+      "upstreamSha256": "ec79a15025bac8d33d62011c54f3b612733fd2a024e623b531b3637aa75070e2",
+      "distributedSha256": "ec79a15025bac8d33d62011c54f3b612733fd2a024e623b531b3637aa75070e2"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/principle-redesign-from-first-principles/SKILL.txt",
+      "upstreamSha256": "170e0a658783e43fee8ec5a8c2422a4abb8f69cef621dd1819a95910b8207034",
+      "distributedSha256": "170e0a658783e43fee8ec5a8c2422a4abb8f69cef621dd1819a95910b8207034"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/principle-separate-before-serializing-shared-state/SKILL.txt",
+      "upstreamSha256": "05294b40448e927c5da1c7b6f5c6b9fed3744637e3833d2d948b9154a9dd00bb",
+      "distributedSha256": "05294b40448e927c5da1c7b6f5c6b9fed3744637e3833d2d948b9154a9dd00bb"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/principle-sequence-verifiable-units/SKILL.txt",
+      "upstreamSha256": "2ccbbacc56ace5afdfb8670cef19d7bd009fb2a0033b9a741cbdf2b6baf72187",
+      "distributedSha256": "2ccbbacc56ace5afdfb8670cef19d7bd009fb2a0033b9a741cbdf2b6baf72187"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/principle-subtract-before-you-add/SKILL.txt",
+      "upstreamSha256": "8c93bb9d1a7f38e2ef37655d93f0e790fa59903105af3d500cc8a663ebe45f3f",
+      "distributedSha256": "8c93bb9d1a7f38e2ef37655d93f0e790fa59903105af3d500cc8a663ebe45f3f"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/principle-test-behavior-not-implementation/SKILL.txt",
+      "upstreamSha256": "f7223698623b6a26fea49c751e466b38e6691b1f32ce841d3983e7ffbe2b74a6",
+      "distributedSha256": "f7223698623b6a26fea49c751e466b38e6691b1f32ce841d3983e7ffbe2b74a6"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/principle-type-system-discipline/SKILL.txt",
+      "upstreamSha256": "5cdaf79785e3c12b2592b9469ee8c272143eb86ab7a18d8382197cea5fd30106",
+      "distributedSha256": "5cdaf79785e3c12b2592b9469ee8c272143eb86ab7a18d8382197cea5fd30106"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/recall/SKILL.txt",
+      "upstreamSha256": "b0ceb996259c3404532f61e4b010df4e3d80d7ddbed85b3c302895723eb62a89",
+      "distributedSha256": "08e25e7cad95f2b28ca007e3fd9b210f66d13b322fd399e7cd3c529d6cd8a3f5"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/reflect/SKILL.txt",
+      "upstreamSha256": "9648df23cabaae99b78ed59cd93b6f35ebbf02105d228e3d0b5c3a3b3419d753",
+      "distributedSha256": "1253795b3c1f899669a55c6545086d47a85f40f56272045c96061c9d72fe3e68"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/setup-pstack/SKILL.txt",
+      "upstreamSha256": "df8ad3638a4dca31fb4b43d58056f0299f23ad0530614166d55ef989062b41ec",
+      "distributedSha256": "8dde1b1d2d4452a40f13e66631a7c7a5f44de8d0b6ba61b657eb6f70f8922542"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/sharpen/SKILL.txt",
+      "upstreamSha256": "563dfc460c605d311e650726288e2f1cbd61eab817db178d6e7e29643e07e7a2",
+      "distributedSha256": "104213d826162eee65efa99409cc0096a6e486840e14d90b25792437e6f2986d"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/show-me-your-work/SKILL.txt",
+      "upstreamSha256": "920a8217cbb62f92a2222fb81fc9eab17ecd554a0277e444a95a927195139bd1",
+      "distributedSha256": "6051683f0b7f9a4ba16d7efa6e7b82d5257b305fa64ea783235e52b92f6ea40f"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/statechart/SKILL.txt",
+      "upstreamSha256": "010b7b4532406739b1c3a426d1a45f02bb618a42561fc96b3976e064a7f8384d",
+      "distributedSha256": "7d87bad89130ca94710e91bad79a3b4d0d27220a40cd91064c30fd3afdbdb83d"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/swarm/SKILL.txt",
+      "upstreamSha256": "fea6bfbbf21e067a4e2d2ebab034bc3af508118e9df1abc9d2ba040d58a6df3a",
+      "distributedSha256": "867d2ecfc07dcd45001a08fcbf02a505ce46010279d5fe235d87c0d942ed0cd5"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/tdd/SKILL.txt",
+      "upstreamSha256": "eeb868e2dfebee528d730a67d7b17498fac4bb85dec2e38bc5c5176aca4d5d2f",
+      "distributedSha256": "eeb868e2dfebee528d730a67d7b17498fac4bb85dec2e38bc5c5176aca4d5d2f"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/teach/SKILL.txt",
+      "upstreamSha256": "bd286e5a6290673be2cd28aef7af2ec7f1fb138e6bce156ea657368c7e7fc8a4",
+      "distributedSha256": "bd286e5a6290673be2cd28aef7af2ec7f1fb138e6bce156ea657368c7e7fc8a4"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/technical-writing/SKILL.txt",
+      "upstreamSha256": "61fe9c424a798ebf36ad94941f87be049cb8827bdf86d21474a0dde37b513c43",
+      "distributedSha256": "479312ed48384dd6c15b0dcaec4a49c924528812f1d311c266b4fc4387121dd5"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/typescript-best-practices/SKILL.txt",
+      "upstreamSha256": "ec1dac086d3708e5940d45d250c30a37dd953b4e3cb2ca0692f5851d7a039e27",
+      "distributedSha256": "ec1dac086d3708e5940d45d250c30a37dd953b4e3cb2ca0692f5851d7a039e27"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/unslop/SKILL.txt",
+      "upstreamSha256": "ccab208e315ce05e2fab8eeee2f7879f1289b5c6844840b2d307adf31c79144f",
+      "distributedSha256": "ccab208e315ce05e2fab8eeee2f7879f1289b5c6844840b2d307adf31c79144f"
+    },
+    {
+      "path": "skills/poteto-mode/bundled/why/SKILL.txt",
+      "upstreamSha256": "144d42e7712723d763e607bc0a969e5f1cdf83ec7228519d87677cc534571bed",
+      "distributedSha256": "144d42e7712723d763e607bc0a969e5f1cdf83ec7228519d87677cc534571bed"
+    }
+  ],
+  "notes": "The poteto-mode entry and all upstream skill references are included. Upstream docs, automations/benny and statechart/scripts/test resources are excluded; links to upstream docs use the immutable source commit. Skills and subprocess capabilities vary by Cindy agent engine. Bugbot requires a repository installation. No Cursor modes, hooks, background processes or plugin tools are installed."
+}

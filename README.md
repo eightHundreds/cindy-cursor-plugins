@@ -1,88 +1,56 @@
-# Cursor Skills for Cindy
+# pstack for Cindy
 
-从 [cursor/plugins](https://github.com/cursor/plugins) 适配的 **Cindy 自定义插件市场**。这是独立的社区适配项目，与 Cursor、Cindy 官方无隶属关系。
+这是 [cursor/plugins 的 pstack](https://github.com/cursor/plugins/tree/main/pstack) 面向 Cindy 的非官方适配，自定义市场只提供一个 `pstack` 插件。上游由 Lauren Tan 创作，采用 MIT 许可证；随包保留原许可、作者署名和来源提交。仓库名称保持不变，并不表示与 Cursor 或 Cindy 官方有关联。
 
-首批提供 **7 个插件、18 个 Skill**，来源于上游 130 个插件中的 6 个。完整范围、未适配条目及原因见 [兼容性报告](catalog/REPORT.md)。这里提供可移植的工作流和开发指南；MCP、Cursor hooks、rules、内置 Canvas 与云 Agent 功能均需原生适配，未作为可用功能发布。
+## 安装和使用
 
-## 在 Cindy 中使用
+1. 在 Cindy「插件」页选择「添加插件市场」，使用 Git 地址 `https://github.com/eightHundreds/cindy-cursor-plugins`，引用填 `main`，稀疏路径留空。
+2. 阅读插件介绍和权限后安装并启用 `pstack`。
+3. 在新任务中输入 `/poteto-mode`，再描述需求，例如「实现一个小功能」或「修复这个错误」。也可以通过自然语言描述需要的工作流，由入口路由到对应参考文件。命令与其他技能同名时，界面可能显示带插件前缀的名称。
 
-已验证 Cindy **0.1.126** 的官方清单校验器及 Forge 打包。`minCindyVersion` 保守声明为这一已验证版本，不代表 Skills 最早于该版本引入。
+只注册一个入口 Skill。其余上游子技能是随包指令资料，没有各自的斜杠命令，也不会按各自描述被单独自动召回；是否选对资料仍取决于当前 Agent 的判断。技能由主 Agent 以用户权限执行，全局启用后对所有项目和会话生效，不受插件 JavaScript 沙箱约束。请在安装和更新前审阅随包内容。
 
-1. 打开 Cindy 的「插件」页，选择「添加插件市场」。
-2. 选择 Git 来源，填入仓库地址：
+## 收录清单
 
-   ```text
-   https://github.com/eightHundreds/cindy-cursor-plugins
-   ```
+以下是当前上游版本的完整技能名称；入口为 `poteto-mode`，其余均为参考资料：
 
-3. Git 引用填 `main`，稀疏路径留空，添加后选择所需插件安装。
-4. 阅读 Cindy 的安装权限说明。安装并启用后，在任务中使用对应的 `/Skill名称`。
+<!-- pstack-skills:start -->
+`architect`、`arena`、`automate-me`、`benchmark-checklist`、`blast-radius`、`bro`、`correct`、`create-formal-verification-skill`、`create-verification-skill`、`figure-it-out`、`how`、`in-your-own-words`、`interrogate`、`ketchup`、`ketchup-video`、`maintain-formal-verification-skill`、`maintain-verification-skill`、`make-bot-ui`、`no-comments`、`poteto-help`、`poteto-mode`、`principle-attack-the-premise`、`principle-boundary-discipline`、`principle-build-the-lever`、`principle-encode-lessons-in-structure`、`principle-exhaust-the-design-space`、`principle-experience-first`、`principle-explain-the-number`、`principle-fix-root-causes`、`principle-foundational-thinking`、`principle-guard-the-context-window`、`principle-laziness-protocol`、`principle-make-operations-idempotent`、`principle-migrate-callers-then-delete-legacy-apis`、`principle-minimize-reader-load`、`principle-model-the-domain`、`principle-never-block-on-the-human`、`principle-outcome-oriented-execution`、`principle-prove-it-works`、`principle-redesign-from-first-principles`、`principle-separate-before-serializing-shared-state`、`principle-sequence-verifiable-units`、`principle-subtract-before-you-add`、`principle-test-behavior-not-implementation`、`principle-type-system-discipline`、`recall`、`reflect`、`setup-pstack`、`sharpen`、`show-me-your-work`、`statechart`、`swarm`、`tdd`、`teach`、`technical-writing`、`typescript-best-practices`、`unslop`、`why`。
+<!-- pstack-skills:end -->
 
-仓库同时提供 `.agents/plugins/marketplace.json` 与 `.cursor-plugin/marketplace.json`，均指向仓库内带有效 `ghost.json` 的普通目录，无 submodule 依赖。请添加**仓库 URL**，而非 JSON 文件的网页 URL。
+入口附带的流程文档：
 
-| 插件 | Skills | 用途 |
-| --- | --- | --- |
-| CLI for Agents | `/cli-for-agents` | 设计可供 Agent 可靠调用的 CLI |
-| Teaching | `/create-learning-path`、`/run-learning-retrospective` | 学习路线与学习复盘 |
-| Cursor SDK Guide | `/cursor-sdk` | 为外部 `@cursor/sdk` 编写集成代码 |
-| Origin API Guides | `/origin-api`、`/port-github-app-to-origin` | 查阅 Origin API、规划 GitHub App 移植 |
-| Grok Voice Guides | `/add-voice`、`/add-dictation`、`/add-read-aloud`、`/debug-voice` | 为用户自己的应用编写语音功能 |
-| pstack Types | `/typescript-best-practices` 及 3 个类型和边界原则 Skill | 类型设计与边界校验 |
-| pstack Quality | 4 个领域建模、行为测试、根因与幂等原则 Skill | 代码质量实践 |
+<!-- pstack-playbooks:start -->
+`authoring-a-skill.md`、`autonomous-run.md`、`autopilot-full.md`、`autopilot-stack.md`、`babysit.md`、`bug-fix.md`、`eval.md`、`feature.md`、`hillclimb.md`、`investigation.md`、`multi-phase-plan.md`、`opening-a-pr.md`、`orchestrate.md`、`pause-safely.md`、`perf-issue.md`、`prototype.md`、`refactoring.md`、`runtime-forensics.md`、`session-pickup.md`、`shipping.md`、`trace-forensics.md`、`visual-parity.md`、`worktree-cleanup.md`。
+<!-- pstack-playbooks:end -->
 
-完整 Skill 名称见各目录的 `ghost.json`。每个插件最多 4 个 Skill；通过 Skill 斜杠命令使用，因此没有额外的插件级 `$command`。
+另有入口参考文档 `bugbot-triage.md`，以及子代理提示词 `poteto-agent.md` 和 `comment-sicko.md`。具体路径和适配内容见[适配报告](catalog/REPORT.md)及插件详情。
 
-SDK、Origin、Grok Voice 是**开发指南**，运行外部服务需要另行获取账号、API 凭证与应用依赖。它们不会将 Cindy 任务转交给 Cursor，也不会给 Cindy 界面添加语音控件。保留的上游 API 示例可能随服务变化，使用时须核对最新官方文档。不同 Agent 引擎对上游附加 frontmatter 的处理可能不同。
+## 与上游的区别
 
-## 自动跟随上游
+- 子技能移到入口目录作为参考文件，保留入口路由和逐项用途说明；入口及内部引用按 Cindy 安装路径调整。
+- `cursor-team-kit` 的 `deslop` 用 pstack 自带的 `unslop` 和 `no-comments` 代替；Cursor 的终端、浏览器、提问及技能创建依赖对应 Cindy 可用工具和指南。
+- 上游代理定义不会由 Cindy 自动加载：需要委派时，将随包代理提示词和通过 `realpath` 获得的入口绝对路径交给通用子代理。后台执行和并行数量取决于当前引擎。
+- babysit 与 shipping 的 `gh` 流程保留；Cursor Bugbot 部分仅适用于仓库确实安装了 Cursor Bugbot 的情况。
+- 未打包上游的 `automations/benny`、`docs/` 和 `statechart/scripts/test/` 测试资料；因此包内不能运行依赖这些测试资料的上游测试命令。随包文件及适配取舍见[适配报告](catalog/REPORT.md)。
 
-[GitHub Actions](https://github.com/eightHundreds/cindy-cursor-plugins/actions/workflows/catalog.yml) 每 6 小时检查 `cursor/plugins` 的 `main`（UTC `00:17 / 06:17 / 12:17 / 18:17`）；也可以在该工作流页面点击 **Run workflow** 手动同步。
+此仓库不提供 Cursor 原生功能，也不能保证每个引擎、外部服务或项目都具备上游流程需要的工具、依赖和权限。GitHub 相关流程需要本机 `gh` 和相应仓库权限。
 
-- 自动更新 `policy.json` 中已纳入的 Skills、同目录参考文件、许可与来源记录，同时刷新全部上游条目的兼容性报告。
-- 插件内容、来源证据、适配规则或可执行位变化时自动增加补丁版本；上游无关文件变化时保持插件版本。没有变化就不提交。
-- 上游删除插件或选定 Skill 后，从可安装目录撤下对应包，保留版本记录以避免未来恢复时倒退。已安装副本不会被远程卸载。
-- 新插件、新 Skill、MCP 或新增原生能力不会自动纳入安装范围；先审查再修改 `policy.json`。对于这些新增条目，仓库会持续记录其存在和未适配状态。
-- 转换、测试或官方清单校验失败时，工作流失败，不推送生成结果；远端保留上次成功的市场。精确文本适配不再匹配时也停止同步。许可证按已审查全文的 SHA-256 固定，任何变动都需人工复核后更新允许列表。
+## 自动同步和维护
 
-这是 **GitHub 定时检查**，并非即时 webhook；运行时间与成功率取决于 GitHub Actions。GitHub 可能在公开仓库长期无活动后暂停计划任务，维护者可在 Actions 页面重新启用。工作流通过仓库自带的 `GITHUB_TOKEN` 提交，不需要用户配置 PAT；仓库或组织策略若禁止 Actions 写入，需在 GitHub 设置中允许该工作流的 `contents: write` 权限。
+[GitHub Actions](https://github.com/eightHundreds/cindy-cursor-plugins/actions/workflows/catalog.yml) 每 6 小时检查上游，也支持手动运行。同步只处理 `cursor/plugins` 的 `pstack/`；上游相关内容没有变化时不提交。上游许可证变化、适配替换未命中、路径不安全、包超限、测试或宿主校验失败时停止发布，保留上一次成功结果。GitHub 可能暂停长期无活动的定时工作流，维护者可在 Actions 页面重新启用。
 
-通过 Cindy 自定义市场安装的插件会绑定该市场来源；Cindy 的后续更新遵循宿主的市场刷新与权限确认规则。手工导入本地 `.cindy` 不会自动绑定这个仓库。
-
-## 来源、修改与信任范围
-
-每个插件都保留上游 MIT `LICENSE`，并附带：
-
-- `UPSTREAM.json`：仓库、内容来源 commit、路径，以及原始/分发版 `SKILL.md` 的 SHA-256。
-- `ADAPTATION.md`：移植范围、修改说明和依赖限制。
-- `ghost.json`：Cindy schema v3 清单，准确列出所含 Skills。
-
-当前正文修改仅为 Teaching 的通用提问工具名称适配；Cursor SDK 的过长 frontmatter description 缩短到 Cindy 的限制内。其余入选 Skills 保留原文。未复制上游市场的官方身份声明、未导入 MCP 登录配置、未执行上游 hooks 或安装脚本。
-
-**Skills 由主 Agent 使用用户权限执行，随插件全局启用，在所有项目可见，不受插件 JS 沙箱限制。** 自动同步也会更新这些指令。请按这个信任范围选择安装；仅在某个工作目录停用插件不会隐藏其 Skills，需全局停用或卸载。首次安装及新增权限由 Cindy 按宿主规则征求确认。
-
-## 本地维护与验证
-
-需要 Python 3.12+、Node.js 22+ 和 Git。转换器只从上游 Git 的提交对象读取文件，不读取未提交工作区内容、不运行上游代码，并拒绝越界路径、符号链接、submodule 与超限文件。
+转换器从上游 Git 提交对象读取内容，不执行上游代码。执行本地维护需要 Python、Node.js、Git 和该仓库已锁定的依赖：
 
 ```bash
-git clone https://github.com/eightHundreds/cindy-cursor-plugins.git
-cd cindy-cursor-plugins
-python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt
+python -m pip install -r requirements.txt
 npm ci --ignore-scripts
-git clone https://github.com/cursor/plugins.git .cache/upstream
-.venv/bin/python scripts/sync.py --upstream .cache/upstream
-.venv/bin/python scripts/sync.py --upstream .cache/upstream --check
-.venv/bin/python -m unittest discover -s tests -v
-
-git clone --branch v0.1.126 --depth 1 https://github.com/makecindy/cindy.git .cache/cindy
-git -C .cache/cindy rev-parse HEAD
-# 必须对应 5ab30ec856e57e2ae8944657e9e2d69264c672f5
-npm run validate:host -- .cache/cindy
+python scripts/sync.py --upstream /path/to/cursor-plugins
+python scripts/sync.py --upstream /path/to/cursor-plugins --check
+python -m unittest discover -s tests -v
+npm run validate:host -- /path/to/cindy-v0.1.126
 ```
 
-只提交成功验证后的 `catalog/`、两个市场清单和 `sync-state.json`。`.cindy` 是本机验证产物，不提交；Cindy 从自定义市场的插件源码目录打包安装。新增包须维护唯一且不超过 32 字符的 id，提供明确的移植说明并遵守每插件 4 个 Skill 的限制。
+转换前请先审阅 `policy.json`。来源与许可记录、完整分发清单及具体限制见 [适配报告](catalog/REPORT.md) 和插件目录。
 
-协议依据：[Cindy v0.1.126 清单校验器](https://github.com/makecindy/cindy/blob/5ab30ec856e57e2ae8944657e9e2d69264c672f5/packages/plugin-protocol/src/manifest.ts)、[自定义市场发现](https://github.com/makecindy/cindy/blob/5ab30ec856e57e2ae8944657e9e2d69264c672f5/apps/desktop/src/main/plugin-market/sources/discover.ts)、[市场安装打包](https://github.com/makecindy/cindy/blob/5ab30ec856e57e2ae8944657e9e2d69264c672f5/apps/desktop/src/main/plugin-market/install.ts)。
-
-本仓库没有向 Cindy 官方公共市场提审；使用入口是上面的 Git 自定义市场。首批全部插件已使用 Cindy Forge 实际打包校验，未安装到作者账号；外部 API 功能未进行账号集成测试。
+**旧版用户注意**：旧市场中的七个 Cursor 适配插件会从市场列表消失。已安装的旧副本不会因市场条目移除而自动卸载；其后续更新取决于 Cindy 的来源及更新规则。新 `pstack` 插件需要单独安装。

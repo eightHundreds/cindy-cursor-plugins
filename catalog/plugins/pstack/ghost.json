@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 3,
+  "id": "pstack",
+  "name": "pstack · Cursor Skills",
+  "description": "A Cindy adaptation of pstack with one entry skill. Skills are globally available, run with the user's permissions, and are not restricted by the JS sandbox. Full skill and playbook lists are in the installed plugin's ADAPTATION.md; poteto-mode indexes bundled skills.",
+  "whenToUse": "Explicit requests to use pstack or poteto-mode for development workflows.",
+  "version": "1.0.6",
+  "minCindyVersion": "0.1.126",
+  "entry": "main.js",
+  "skill": {
+    "items": [
+      {
+        "dir": "skills/poteto-mode",
+        "name": "poteto-mode",
+        "description": "poteto's agent style for concise, detailed responses, deliberate subagents, unslopped prose, simple code, and verified work. Use for poteto, /poteto-mode, or requests to work in this style."
+      }
+    ]
+  },
+  "releaseNotes": "Adapt pstack skills from cursor/plugins at 2776ddd2355d. See ADAPTATION.md and UPSTREAM.json for scope and changes."
+}

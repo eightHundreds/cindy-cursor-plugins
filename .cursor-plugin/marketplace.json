@@ -5,32 +5,8 @@
   },
   "plugins": [
     {
-      "name": "cursor-cli-for-agents",
-      "source": "./catalog/plugins/cursor-cli-for-agents"
-    },
-    {
-      "name": "cursor-teaching",
-      "source": "./catalog/plugins/cursor-teaching"
-    },
-    {
-      "name": "cursor-sdk-guide",
-      "source": "./catalog/plugins/cursor-sdk-guide"
-    },
-    {
-      "name": "cursor-origin-guides",
-      "source": "./catalog/plugins/cursor-origin-guides"
-    },
-    {
-      "name": "cursor-grok-voice-guides",
-      "source": "./catalog/plugins/cursor-grok-voice-guides"
-    },
-    {
-      "name": "cursor-pstack-types",
-      "source": "./catalog/plugins/cursor-pstack-types"
-    },
-    {
-      "name": "cursor-pstack-quality",
-      "source": "./catalog/plugins/cursor-pstack-quality"
+      "name": "pstack",
+      "source": "./catalog/plugins/pstack"
     }
   ]
 }

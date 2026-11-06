@@ -7,50 +7,57 @@
       "version": "1.0.1",
       "fingerprint": "f3765d9f6d8ead8830da3bf615d7be63f99c49958878cb4cdf72cbe0aa27356a",
       "contentCommit": "2776ddd2355d6d6c8747d3964600f28daf62f049",
-      "active": true,
+      "active": false,
       "outputFingerprint": "6f0bc1a99441e41242d3bf5942fb5f65ae292da67312bb35004c69fa37aa6e63"
     },
     "cursor-teaching": {
       "version": "1.0.1",
       "fingerprint": "f98343a93606c998c95da8b3e1819276403c40c03d38b4560382a9b080b7ec57",
       "contentCommit": "2776ddd2355d6d6c8747d3964600f28daf62f049",
-      "active": true,
+      "active": false,
       "outputFingerprint": "16400da22ba3ed245ea13894a7dc1ffbc91cb0aad49b0fbfc762efbcdcaa4cb5"
     },
     "cursor-sdk-guide": {
       "version": "1.0.1",
       "fingerprint": "ed5ea32822f7c28000bf8f57f424f5bcceb4dd99e03b3d1bca46b3f30b63fefa",
       "contentCommit": "2776ddd2355d6d6c8747d3964600f28daf62f049",
-      "active": true,
+      "active": false,
       "outputFingerprint": "7080a571903ddf0d2be6159a0c82274d613c65b6b629f0d71ba07f97eca0b3bb"
     },
     "cursor-origin-guides": {
       "version": "1.0.1",
       "fingerprint": "138cb14fe31a37d744fb33b2b8a8ad22c21eccc20c31f701629264cd8d5e791e",
       "contentCommit": "2776ddd2355d6d6c8747d3964600f28daf62f049",
-      "active": true,
+      "active": false,
       "outputFingerprint": "e6a0429bd5889a27d3733748168805a789394112a26ca98c786447b6f65929cc"
     },
     "cursor-grok-voice-guides": {
       "version": "1.0.1",
       "fingerprint": "58a973124daaf0519e84866fcea9b1d17d68a166ae78597c0e214ad4ae0f4d68",
       "contentCommit": "2776ddd2355d6d6c8747d3964600f28daf62f049",
-      "active": true,
+      "active": false,
       "outputFingerprint": "f25d4b591fbb29bbbd22bab477d351fc1aa826ec2668ea5fa3feb45c17c16a8d"
     },
     "cursor-pstack-types": {
       "version": "1.0.1",
       "fingerprint": "e4c7c31b28a80845e84a76a794e91976037b37c7a2822a82ba339b0d2399f7fd",
       "contentCommit": "2776ddd2355d6d6c8747d3964600f28daf62f049",
-      "active": true,
+      "active": false,
       "outputFingerprint": "b63855932c32aed99a69618c8a67715c0d2adee1524aa187a6b6384c8523f02f"
     },
     "cursor-pstack-quality": {
       "version": "1.0.1",
       "fingerprint": "6dfc3e6cd56bb895137edc5e840db9e7f705290a34e018dfe29afe380bfd904d",
       "contentCommit": "2776ddd2355d6d6c8747d3964600f28daf62f049",
-      "active": true,
+      "active": false,
       "outputFingerprint": "50ccc48c4301e4cede9ad8c99eda33bf5f3239e4f9c9bd8869d0c6dd3f89ee10"
+    },
+    "pstack": {
+      "version": "1.0.6",
+      "fingerprint": "7c73cfbf3439723f6be88d2329c932baf2cbfe09486ed7d2b5382b7669dad0ec",
+      "contentCommit": "2776ddd2355d6d6c8747d3964600f28daf62f049",
+      "active": true,
+      "outputFingerprint": "7b890c7f4e1cffbaa191f82ba06d75185911d166dc2f9f5976f863e4bf760ee9"
     }
   }
 }
